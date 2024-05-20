@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Blog, Events, and News</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+  *{
+    margin: 0;
+    padding: 0;
+  }
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F2FAFA;
+            color: #333;
+        }
+        
+        .footer{
+      position: relative;
+      top: 70px;
+      background-color: #24262b;
+        padding: 45px 0;
+    }
+    .copy{
+  text-align: center;
+  color: teal;
+  position: relative;
+  top: 20px;
+  font-size: 18px;
+  font-family: poppins, sans-serif;
+}
+    .footer-col{
+       width: 25%;
+       padding: 0 15px;
+    }
+    .footer-col2{
+      width: 17%;
+      position: relative;
+      
+      left: 1090px;
+      display: flex;
+      flex-direction: column;
+      bottom: 230px;
+
+      padding: 0 15px;
+   }
+    .footer-col h4{
+      font-size: 18px;
+      color: #ffffff;
+      text-transform: capitalize;
+      margin-bottom: 35px;
+      font-weight: 500;
+      position: relative;
+    }
+    .footer-col2 h4{
+      font-size: 18px;
+      color: #ffffff;
+      text-transform: capitalize;
+      margin-bottom: 35px;
+      font-weight: 500;
+      position: relative;
+    }
+    .footer-col h4::before{
+      content: '';
+      position: absolute;
+      left:0;
+      bottom: -10px;
+      background-color: #e91e63;
+      height: 2px;
+      box-sizing: border-box;
+      width: 50px;
+    }
+    .footer-col2 h4::before{
+      content: '';
+      position: absolute;
+      left:0;
+      bottom: -10px;
+      background-color: #e91e63;
+      height: 2px;
+      box-sizing: border-box;
+      width: 50px;
+    }
+    .footer-col ul li:not(:last-child){
+      margin-bottom: 10px;
+    }
+    .footer-col ul li a{
+      font-size: 16px;
+      text-transform: capitalize;
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 300;
+      color: #bbbbbb;
+      display: block;
+      transition: all 0.3s ease;
+    }
+    .footer-col ul li a:hover{
+      color: #ffffff;
+      padding-left: 8px;
+    }
+    .footer-col2 .social-links a{
+      display: inline-block;
+      height: 40px;
+      width: 40px;
+      background-color: rgba(255,255,255,0.2);
+      margin:0 10px 10px 0;
+      text-align: center;
+      line-height: 40px;
+      border-radius: 50%;
+      color: #ffffff;
+      transition: all 0.5s ease;
+    }
+    .footer-col2 .social-links a:hover{
+      color: #24262b;
+      background-color: #ffffff;
+    }
+    
+    /*responsive*/
+    @media(max-width: 767px){
+      .footer-col{
+        width: 50%;
+        margin-bottom: 30px;
+        
+    }
+    .footer-col2{
+      width: 50%;
+      margin-bottom: 30px;
+      
+  }
+    }
+    @media(max-width: 576px){
+      /*repcaed */
+      .footer{
+        position: relative;
+        background-color: #000;
+        top: -3px;
+          padding: 70px 0;
+      }
+      /*repcaed */
+      .footer-col{
+        width: 100%;
+    }
+    .footer-col2{
+      width: 100%;
+  }
+
+     
+  .footer-col2 .social-links a{
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    background-color: rgba(255,255,255,0.2);
+    margin: -16px 20px 80px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.5s ease;
+  }
+  .footer-col2 .social-links{
+    display: flex;
+    position: relative;
+
+  }
+  .footer-col2 .social-links a:hover{
+    color: #24262b;
+    background-color: #ffffff;
+  }
+  .footer-col2{
+    width: 100%;
+    max-height: 130px;
+    position: relative;
+    top: 198px;
+    left: -400px;
+}
+
+    }
+
+
+    @media (min-width: 350px) and (max-width: 487px) {
+    .footer-col2 .social-links a{
+      display: inline-block;
+      height: 30px;
+      width: 30px;
+      background-color: rgba(255,255,255,0.2);
+      margin: -16px 20px 80px 0;
+      text-align: center;
+      line-height: 40px;
+      border-radius: 50%;
+      color: #ffffff;
+      transition: all 0.5s ease;
+    }
+    .footer-col2 .social-links{
+      display: flex;
+      position: relative;
+
+    }
+   
+    .footer-col2 .social-links a:hover{
+      color: #24262b;
+      background-color: #ffffff;
+    }
+    .footer-col2{
+      width: 100%;
+      max-height: 130px;
+      position: relative;
+      top: 199px;
+      left: -420px;
+  }
+  }
+
+  .container{
+	max-width: 1170px;
+	margin-top: 100px;
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+ul{
+	list-style: none;
+}
+
+        .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  position: sticky;
+  color: #fff;
+  height: 90px;
+  background-color: #11474D;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+}
+
+nav{
+  padding: 10px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  height: 70px;
+  width: 100%;
+  left: -10px;
+}
+
+.logo {
+  width: 160px;
+  position: relative;
+  left: -20px;
+  top: 0px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+  transition: transform 0.3s ease; /* Add transition for smooth zoom effect */
+}
+
+.logo:hover {
+  transform: scale(1.1); /* Scale the logo slightly on hover */
+}
+
+nav ul{
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+nav ul li{
+  list-style-type: none;
+}
+
+nav ul li a{
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 20px;
+  position: relative;
+  left: -10px;
+}
+nav ul li a:hover{
+    color: rgb(0, 0, 0);
+    padding-right: 8px;
+  
+}
+
+.menu-icon{
+  display: none;
+}
+
+.menu-icon i{
+  color: #fff;
+  font-size: 30px;
+}
+
+@media (max-width:820px) {
+  nav ul{
+      position: absolute;
+      top: 70px;
+      left: 0;
+      right: 0;
+      flex-direction: column;
+      text-align: center;
+      background-color: #00a7ff;
+      z-index: 7;
+      gap: 0;
+      overflow: hidden;
+  }
+  nav ul li{
+      padding: 4px;
+      height: 900px;
+      padding-top: 0;
+     color: transparent;
+  }
+  .menu-icon{
+      display: block;
+  }
+  #menuList{
+      transition: all 0.5s;
+  }
+
+  .header{
+    z-index: 10;
+  }
+}
+
+
+/*call us*/
+a{
+  text-decoration: none;
+}
+
+/*change2*/
+.call {
+  max-width: 120px;
+  height: 40px;
+  background: #ffffff;
+  position: relative;
+  right: -130px;
+  bottom: 74px;
+  border-radius: 25px;
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  cursor: pointer;
+  text-decoration: none;
+  z-index: 30;
+}
+
+.call h2 {
+  position: relative;
+  font-size: 14px;
+  left: 52px;
+  bottom: -10.7px;
+  color: lightgreen;
+}
+
+.circle1,
+.circle2 {
+  width: 43px;
+  height: 43px;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.circle1 {
+  animation: animate1 2.5s linear infinite;
+}
+
+.circle2 {
+  animation: animate2 2.5s linear infinite;
+}
+
+@keyframes animate1 {
+  0% {
+    width: 25px;
+    height: 25px;
+    background-color: rgb(36, 167, 64);
+    top: 10px;
+    left: 7px;
+  }
+  100% {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(134, 78, 13, 0);
+    top: -2px;
+    left: 5px;
+  }
+}
+
+@keyframes animate2 {
+  0% {
+    width: 25px;
+    height: 25px;
+    background-color: rgb(36, 167, 64);
+    top: 10px;
+    left: 7px;
+  }
+  100% {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(134, 78, 13, 0);
+    top: -2px;
+    left: 5px;
+  }
+}
+
+.phone {
+  width: 60px;
+  height: 44px;
+  position: absolute;
+  z-index: 5;
+}
+
+.phone img {
+  width: 80%;
+}
+@media (min-width: 820px) and (max-width: 1155px) {
+/*change2*/
+.call {
+  width: 120px;
+  height: 43px;
+  background: #ffffff;
+  position: relative;
+  right: -180px;
+  bottom: 44px;
+  border-radius: 25px;
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  cursor: pointer;
+  text-decoration: none;
+  z-index: 60;
+}
+
+.call h2 {
+  position: relative;
+  font-size: 18px;
+  left: 52px;
+  bottom: 4.3px;
+  color: lightgreen;
+}
+
+.circle1,
+.circle2 {
+  width: 43px;
+  height: 43px;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.circle1 {
+  animation: animate1 2.5s linear infinite;
+}
+
+.circle2 {
+  animation: animate2 2.5s linear infinite;
+}
+
+@keyframes animate1 {
+  0% {
+    width: 25px;
+    height: 25px;
+    background-color: rgb(36, 167, 64);
+    top: 10px;
+    left: 7px;
+  }
+  100% {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(134, 78, 13, 0);
+    top: -2px;
+    left: 5px;
+  }
+}
+
+@keyframes animate2 {
+  0% {
+    width: 25px;
+    height: 25px;
+    background-color: rgb(36, 167, 64);
+    top: 10px;
+    left: 7px;
+  }
+  100% {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(134, 78, 13, 0);
+    top: -2px;
+    left: 5px;
+  }
+}
+
+.phone {
+  width: 60px;
+  height: 44px;
+  position: absolute;
+  z-index: 5;
+}
+
+.phone img {
+  width: 80%;
+}
+}
+@media (max-width: 375){
+
+  .call {
+    width: 120px;
+    height: 43px;
+    background: #ffffff;
+    position: relative;
+    right: 20px;
+    bottom: 34px;
+    border-radius: 25px;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    cursor: pointer;
+    text-decoration: none;
+    z-index: 60;
+  }
+  
+}
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 36px;
+            font-weight: 700;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        h1:after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 0;
+            width: 80px;
+            height: 4px;
+            background-color: #2980b9;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .section:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: #2980b9;
+            transform: translateX(-100%);
+            transition: transform 0.3s ease;
+        }
+        
+        .section:hover:before {
+            transform: translateX(0);
+        }
+        
+        .section h2 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 24px;
+            font-weight: 600;
+        }
+        
+        .section-content {
+            display: none;
+            margin-top: 15px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            animation: fadeIn 0.3s ease;
+        }
+        
+        .section.active .section-content {
+            display: block;
+        }
+        
+        .image {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+        
+        .link {
+            color: #2980b9;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .link:hover {
+            color: #3498db;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+     <!-- Header -->
+     <header class="header">
+        <nav>
+          <div class="logo-container">
+            <a href="home.html"><img src="/static/images/logo.png" alt="Your Logo" class="logo"></a>
+        </div>
+          <ul id="menuList">
+              <li><a href="home.html">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#service">Service</a></li>
+              <li><a href="/prod">Products</a></li>
+              <li><a href="/templates/c.html">Blog</a></li>
+              <li><a href="#portfolio">Portfolio</a></li>
+              <li><a href="#contact">Contact</a></li>
+              <li><a href="/templates/vacancy.html">Job</a></li>
+              <li><a href="/templates/lagin.html"><i class="fas fa-user"></i></a></li>
+              <li><a href="admin.html"></a></li>
+  
+          </ul>
+          <div class="menu-icon">
+              <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+          </div>
+      </nav>
+    </header>
+    
+     <!--call button-->
+     <a href="https://www.instagram.com/">
+      <div class="call"> 
+        <h2>Call Us</h2>
+        <div class="phone">
+          <img src="/static/images/call.png">
+        </div>
+        <div class="circle1"></div>
+        <div class="circle2"></div>
+      </div>
+    </a>
+    <!--call button-->
+<body>
+    <div class="container">
+        <h1>Blog, Events, and News</h1>
+
+        <div class="section" id="blog-section">
+            <h2>Blog Posts</h2>
+            <div class="section-content">
+                <ul>
+                    {% for post in blog_posts %}
+                        <li>{{ post.title }} - {{ post.content }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+
+        <div class="section" id="events-section">
+            <h2>Events</h2>
+            <div class="section-content">
+                <ul>
+                    {% for event in events %}
+                        <li>
+                            <div>{{ event.title }} - {{ event.description }} - {{ event.date }} - {{ event.location }}</div>
+                            {% if event.image_path %}
+                                <img src="{{ url_for('static', filename=event.image_path) }}" alt="Event Image" class="image">
+                            {% endif %}
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+
+        <div class="section" id="news-section">
+            <h2>News Articles</h2>
+            <div class="section-content">
+                <ul>
+                    {% for article in news_articles %}
+                        <li>
+                            <div>{{ article.title }} - {{ article.content }} - {{ article.published_date }}</div>
+                            {% if article.image_path %}
+                                <img src="{{ url_for('static', filename=article.image_path) }}" alt="Article Image" class="image">
+                            {% endif %}
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container1">
+          <div class="row">
+            <div class="footer-col">
+              <h4>company</h4>
+              <ul>
+                <li><a href="#about">about us</a></li>
+                <li><a href="#service">our services</a></li>
+                <li><a href="product.html">produts</a></li>
+                <li><a href="#portfolio">portfolio</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>Amco</h4>
+              <ul>
+                <li><a href="product.html">Our furniture </a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="blog.html">News</a></li>
+                <li><a href="blog.html">Event</a></li>
+                
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>Contact</h4>
+              <ul>
+                <li><a href="#">email<br>
+                nazrawigirma598@gmail.com</a></li>
+                <li><a href="#">Location<br>
+                Meskelflower infront of Dreamlinerhotel </a></li>
+                <li><a href="#">phone <br/>
+                  091020304050</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer-col2">
+              <h4>follow us</h4>
+              <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="copy">
+            Copyright 2024 © || NAMIK DEVELOPMENT
+          </div>
+        </div>
+     </footer>
+    <script>
+        function toggleSectionContent(sectionId) {
+            const section = document.getElementById(sectionId);
+            section.classList.toggle('active');
+        }
+
+        document.querySelectorAll('.section').forEach(section => {
+            section.addEventListener('click', () => {
+                toggleSectionContent(section.id);
+            });
+        });
+    </script>
+</body>
+</html>
